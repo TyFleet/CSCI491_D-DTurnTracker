@@ -1,1 +1,19 @@
 This is a list of things TODO on the project. 
+
+Add and Adapt from LAMP Stack assignment
+ - checkuser.php
+ - footer.php
+ - header.php
+ - index.php
+ - login.php
+ - signup.php
+ - logout.php
+ - css
+ - images
+
+PHP files to add and complete
+ - turns.php
+ - stats.php
+ 
+Other tasks
+ - adapt database to our needs
