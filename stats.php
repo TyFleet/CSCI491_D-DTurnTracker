@@ -41,7 +41,7 @@ echo <<<_END
         <input type='number' id='hp' name='hp' placeholder='0' required>
         
         <label for='armor'>Armor Class</label>
-        <input type='number' id='armor' name='armor placeholder='0' required>
+        <input type='number' id='armor' name='armor' placeholder='0' required>
         
         <label for='speed'>Speed</label>
         <input type='text' id='speed' name='speed' placeholder='30' required><br><br>
