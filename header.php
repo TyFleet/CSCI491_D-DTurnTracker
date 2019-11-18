@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$clubstr = 'Kyle\'s Gaming Website';
-$userstr = 'Welcome to the Fish Bowl';
+$clubstr = 'Dungeons and Dragons Turn Tracker';
+$userstr = 'Welcome to DnD!';
 
 echo <<<_INIT
 <!DOCTYPE html>
@@ -43,8 +43,8 @@ echo <<<_LOGGEDIN
         <div class='sidebar'><nav><ul>
             <li><a href='members.php?view=$user'>Home</a></li>
             <li><a href='members.php'>Members</a></li>
-            <li><a href='friends.php'>Friends</a></li>
-            <li><a href='games.php'>Games</a></li>
+            <li><a href='stats.php'>Character Creator</a></li>
+            <li><a href='turns.php'>Turn Tracker</a></li>
             <li><a href='messages.php'>Messages</a></li>
             <li><a href='profile.php'>Edit Profile</a></li>
             <li><a href='logout.php'>Log out</a></li>

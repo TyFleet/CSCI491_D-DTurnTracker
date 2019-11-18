@@ -4,12 +4,16 @@
     <head>
         <meta charset='utf-8'>
         <link rel='stylesheet' href='css/styles.css'>
+        <link rel='stylesheet' href='css/stats.css'>
         <title>Character Creator</title>
     </head>
+    <body>
+        <div id='wrapper'>
 <?php
 #require_once 'header.php';
 echo <<<_END
-<form action='https://wp.zybooks.com/form-viewer.php' target='_blank' method='POST' id='character_form'>
+<div id='character_form'>
+<form action='https://wp.zybooks.com/form-viewer.php' target='_blank' method='POST'>
     <fieldset id='char_sheet'>
         <legend>Character Creation</legend>
         
@@ -129,6 +133,8 @@ echo <<<_END
             <input type="submit" value="Create Character">
         </p>
     </fieldset>
+    </form>
+    </div>
 _END;
 
 echo <<<_END
@@ -140,6 +146,8 @@ echo <<<_END
 _END;
 #require_once 'footer.php'
 ?>
+            </div>
+        </body>
 </html>
 
 
