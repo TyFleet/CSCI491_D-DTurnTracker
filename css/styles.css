@@ -23,7 +23,7 @@ html {
 
 #wrapper {
     margin: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     border-color: #222;
     border-style: solid;
     border-width: 0 10px;
@@ -125,6 +125,8 @@ textarea {
 
 footer {
     font-family: 'Muli', sans-serif;
+    width: 1170px;
+    margin: auto;
     padding: 20px;
     color: #ddd;
     background-color: #222;

@@ -1,18 +1,18 @@
 #wrapper{
-    
+    width: 1200px;
     border: 1px solid black;
     overflow: hidden;
 }
 #character_form{
     display:inline-block;
     float: left;
-    width:50%;
+    width:60%;
     margin-right: 10px; 
 }
 
 #creation_help{
     border: solid 1px red;
     display:inline-block;
-    width:45%;
+    width:35%;
     overflow:hidden;
 }

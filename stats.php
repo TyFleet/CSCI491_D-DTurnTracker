@@ -21,14 +21,14 @@ echo <<<_END
         <div>
         <input type='radio' name='char_type' value='player' id='player' checked><label for='player'>Player</label>
         <input type='radio' name='char_type' value='monster' id='monster'><label for='monster'>Monster</label>
-        </div>
+        </div><br>
         
         <div>
         <label for='char_name'>Character Name</label>
         <input type='text id='char_name' name='char_name' placeholder='Llewyn' required>
         <label for='player_name'>Player Name</label>
         <input type='text' id='player_name' name='player_name' placeholder='John Smith'>
-        </div>
+        </div><br>
         
         <div>
         <label for='class'>Class</label>
@@ -65,9 +65,9 @@ echo <<<_END
             <option value="undead">Undead</option>
         </select>
         </div>
-        <br><br>
+        <br>
         
-        <div>
+        <div id='LHA'>
         <label for='level'>Level</label>
         <input type='number' id='level' name='level' placeholder='1' min='1' max='20' required><br><br>
         
@@ -144,10 +144,8 @@ echo <<<_END
         </p>
     </div>
 _END;
-#require_once 'footer.php'
+require_once 'footer.php'
 ?>
-            </div>
-        </body>
-</html>
+
 
 

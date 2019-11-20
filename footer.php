@@ -3,7 +3,7 @@
     </div>
     <div class='clear'></div>
         <footer>
-            <p>Copyright LandFish Inc.</p>
+            <p>Copyright No one cuz this website aint gettin finished</p>
         </footer>
         </div>
     </body>
