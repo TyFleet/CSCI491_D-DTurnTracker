@@ -57,7 +57,7 @@ sleight_of_hand INT(2) NULL DEFAULT NULL ,
 stealth INT(2) NULL DEFAULT NULL ,
 survival INT(2) NULL DEFAULT NULL ,
 hitDice INT(2) NULL DEFAULT NULL ,
-proficiencies ,
+proficiencies text ,
 notes text ,
 isPlayerCharacter tinyint(1)');
 
