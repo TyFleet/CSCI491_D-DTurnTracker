@@ -1,1 +1,5 @@
 This is a log of work done.
+
+Kyle
+- just completed database adaptation
+- next step is creating functional forms that can store info in the database
