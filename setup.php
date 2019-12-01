@@ -18,8 +18,8 @@ createTable('members',
             isDM tinyint(1),
             INDEX(user(6))');
 
-createTable(`characterInfo`,
-`charName VARCHAR(30) NULL DEFAULT NULL ,
+createTable('characterInfo',
+'charName VARCHAR(30) NULL DEFAULT NULL ,
 identifier INT(10) NULL DEFAULT NULL ,
 class VARCHAR(20) NULL DEFAULT NULL ,
 level INT(2) NULL DEFAULT NULL ,
@@ -56,11 +56,11 @@ religion INT(2) NULL DEFAULT NULL ,
 sleight_of_hand INT(2) NULL DEFAULT NULL ,
 stealth INT(2) NULL DEFAULT NULL ,
 survival INT(2) NULL DEFAULT NULL ,
-hitDice INT(2) NULL DEFAULT NULL`);
+hitDice INT(2) NULL DEFAULT NULL');
 
-createTable(`definitions` (
- `keyword varchar(30) CHARACTER SET utf8 DEFAULT NULL,
- description text`);
+createTable('definitions',
+ 'keyword varchar(30) NULL,
+ description text');
 ?>
 
     <p>The database is ready to go.</p>
