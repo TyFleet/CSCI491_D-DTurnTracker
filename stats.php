@@ -1,7 +1,7 @@
 <?php
 require_once 'functions.php';
 echo <<<_END
-<form action='stats.php' target='_self' method='POST'>
+<form action='stats.php' target='_blank' method='POST'>
     <fieldset id='char_sheet'>
         <legend>Character Creation</legend>
 
