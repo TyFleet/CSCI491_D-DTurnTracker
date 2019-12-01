@@ -1,7 +1,8 @@
 <?php
 require_once 'functions.php';
-echo <<<_END
-<form action='stats.php' target='_blank' method='POST'>
+?>
+
+<form action='stats.php' target='_self' method='POST'>
     <fieldset id='char_sheet'>
         <legend>Character Creation</legend>
 
@@ -88,7 +89,8 @@ echo <<<_END
             <input type="submit" value="Create Character">
         </p>
     </fieldset>
-_END;
+
+<?php
 
 // if(isset($_POST['player_name'])){
 //   $insert_statement = "INSERT INTO characterInfo
