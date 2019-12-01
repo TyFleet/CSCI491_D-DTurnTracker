@@ -15,7 +15,7 @@ require_once 'functions.php';
 createTable('members',
             'user VARCHAR(16),
             pass VARCHAR(16),
-            isDM tinyint(1) NOT NULL DEFAULT '0',
+            isDM tinyint(1),
             INDEX(user(6))');
 
 createTable(`characterInfo`,
