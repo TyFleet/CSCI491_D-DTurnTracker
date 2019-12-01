@@ -94,7 +94,6 @@ require_once 'functions.php';
 
 if(isset($_POST['player_name'])){
 
-  $chartype = 0;
   if ($_POST['char_type'] == 'player'){
     $chartype = 1;
   }else{
@@ -140,28 +139,26 @@ if(isset($_POST['player_name'])){
                                      stealth,
                                      survival,
                                      hitDice)
-                                     VALUES (
-                                       $_POST[`char_name`],
-                                       NULL,
-                                       $_POST['class'],
-                                       $_POST['level'],
-                                       $_POST[value-5],
-                                       NULL,
-                                       $_POST['player_name'],
-                                       $_POST['race'],
-                                       $_POST['align'],
-                                       $_POST['strength'],
-                                       $_POST['dex'],
-                                       $_POST['constit'],
-                                       $_POST['intel'],
-                                       $_POST['wisdom'],
-                                       $_POST['charisma'],
-                                       $_POST['armor'],
-                                       NULL,
-                                       $_POST['speed'],
-                                       $_POST['hp'],
-                                       $_POST['hp'],
-                                       NULL,
+                                     VALUES (".
+                                       $_POST['char_name'].",
+                                       NULL,".
+                                       $_POST['class'].",".
+                                       $_POST['level'].","
+                                       NULL,".
+                                       $_POST['player_name'].",".
+                                       $_POST['race'].",".
+                                       $_POST['align'].",".
+                                       $_POST['strength'].",".
+                                       $_POST['dex'].",".
+                                       $_POST['constit'].",".
+                                       $_POST['intel'].",".
+                                       $_POST['wisdom'].",".
+                                       $_POST['charisma'].",".
+                                       $_POST['armor'].",
+                                       NULL,".
+                                       $_POST['speed'].",".
+                                       $_POST['hp'].",".
+                                       $_POST['hp'].",
                                        NULL,
                                        NULL,
                                        NULL,
@@ -179,9 +176,10 @@ if(isset($_POST['player_name'])){
                                        NULL,
                                        NULL,
                                        NULL,
-                                       $_POST['profs'],
-                                       $_POST['notes'],
-                                       $chartype)";
+                                       NULL,".
+                                       $_POST['profs'].",".
+                                       $_POST['notes'].",".
+                                       $chartype.")";
 
   queryMysql($insert_statement);
 }
