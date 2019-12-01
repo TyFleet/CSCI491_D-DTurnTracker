@@ -2,6 +2,13 @@
 
 require_once 'functions.php';
 
+$chartype = 0;
+if ($_POST['char_type'] == 'player'){
+  $chartype = 1;
+}else{
+  $chartype = 0;
+}
+
 //compile form data into query
 insert_statement = 'INSERT INTO `characterInfo`
                                   (`charName`,
@@ -79,7 +86,10 @@ insert_statement = 'INSERT INTO `characterInfo`
                                      NULL,
                                      NULL,
                                      NULL,
-                                     NULL)'
+                                     NULL,
+                                     $_POST['profs'],
+                                     $_POST['notes'],
+                                     $chartype)'
 
 queryMysql(insert_statement)
 

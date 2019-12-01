@@ -56,7 +56,10 @@ religion INT(2) NULL DEFAULT NULL ,
 sleight_of_hand INT(2) NULL DEFAULT NULL ,
 stealth INT(2) NULL DEFAULT NULL ,
 survival INT(2) NULL DEFAULT NULL ,
-hitDice INT(2) NULL DEFAULT NULL');
+hitDice INT(2) NULL DEFAULT NULL ,
+proficiencies ,
+notes text ,
+isPlayerCharacter tinyint(1)');
 
 createTable('definitions',
  'keyword varchar(30) NULL,
