@@ -16,7 +16,7 @@ function createTable($name, $query){
 }
 
 function insertInto($db_name, $query_columns, $query_values){
-  queryMysql("INSERT INTO $db_name ($query_columns) VALUES ('$query_values[0]', '$query_values[1]', '$query_values[2]', '$query_values[3]', '$query_values[4]', '$query_values[5]', '$query_values[6]', '$query_values[7]', '$query_values[8]', '$query_values[9]', '$query_values[10]', '$query_values[11]', '$query_values[12]', '$query_values[13]', '$query_values[14]', '$query_values[15]', '$query_values[16]', '$query_values[17]', '$query_values[18]')");
+  queryMysql("INSERT INTO $db_name ($query_columns) VALUES ($query_values)");
 }
 
 function queryMysql($query) {
