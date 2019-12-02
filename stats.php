@@ -145,23 +145,23 @@ if(isset($_POST['player_name'])){
                                      VALUES (
                                        $_POST['char_name'],
                                        $_POST['class'],
-                                       intval($_POST['level']),
+                                       $_POST['level'],
                                        $_POST['player_name'],
                                        $_POST['race'],
                                        $_POST['align'],
-                                       intval($_POST['strength']),
-                                       intval($_POST['dex']),
-                                       intval($_POST['constit']),
-                                       intval($_POST['intel']),
-                                       intval($_POST['wisdom']),
-                                       intval($_POST['charisma']),
-                                       intval($_POST['armor']),
-                                       intval($_POST['speed']),
-                                       intval($_POST['hp']),
-                                       intval($_POST['hp']),
+                                       $_POST['strength'],
+                                       $_POST['dex'],
+                                       $_POST['constit'],
+                                       $_POST['intel'],
+                                       $_POST['wisdom'],
+                                       $_POST['charisma'],
+                                       $_POST['armor'],
+                                       $_POST['speed'],
+                                       $_POST['hp'],
+                                       $_POST['hp'],
                                        $_POST['profs'],
                                        $_POST['notes'],
-                                       intval($chartype))";
+                                       $chartype)";
 
   queryMysql($insert_statement);
 }
