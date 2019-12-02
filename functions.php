@@ -5,8 +5,6 @@ $dbname  = 'db23';   // Modify these...
 $dbuser  = 'user23';   // ...variables according
 $dbpass  = '23lair';   // ...to your installation
 
-unset($_POST);
-
 $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 if ($connection->connect_error)
     die("Fatal Error 1");
