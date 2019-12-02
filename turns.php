@@ -37,8 +37,6 @@
 
   }else{
 
-    $post_count = count($_POST);
-
     ?>
     <div id='turn_order'>
     <?php
@@ -55,11 +53,70 @@
     }
 
     asort($sorted_array);
-    print_r(sizeof($_POST));
-    echo "<br><br>";
-    print_r($_POST);
-    echo "<br><br>";
-    print_r($sorted_array);
+
+    ?>
+    <form action="turns.php" method="POST">
+      <fieldset id='turn_tracker'>
+    <?php
+
+    foreach($sorted_array as $key => $value){
+      $items = explode("," $key);
+      $charName = $items[0];
+      $class = $items[1];
+      $level = $items[2];
+      $playerName = $items[3];
+      $race = $items[4];
+      $alignment = $items[5];
+      $str = $items[6];
+      $dex = $items[7];
+      $con = $items[8];
+      $int = $items[9];
+      $wis = $items[10];
+      $cha = $items[11];
+      $ac = $items[12];
+      $speed = $items[13];
+      $maxHP = $items[14];
+      $currentHP = $items[15];
+      $profs = $items[16];
+      $notes = $items[17];
+      $isPlayer = $items[18];
+
+      ?>
+        <div class="row">
+          <input type='text' name='<?php echo $playerName.$charName;?>' value='<?php echo $charName;?>' required>
+          <input type='text' name='<?php echo $playerName.$class;?>' value='<?php echo $class;?>' required>
+          <input type='text' name='<?php echo $playerName.$level;?>' value='<?php echo $level;?>' required>
+          <input type='text' name='<?php echo $playerName.$playerName;?>' value='<?php echo $playerName;?>' required>
+          <input type='text' name='<?php echo $playerName.$race;?>' value='<?php echo $race;?>' required>
+          <input type='text' name='<?php echo $playerName.$alignment;?>' value='<?php echo $alignment;?>' required>
+          <input type='text' name='<?php echo $playerName.$str;?>' value='<?php echo $str;?>' required>
+          <input type='text' name='<?php echo $playerName.$dex;?>' value='<?php echo $dex;?>' required>
+          <input type='text' name='<?php echo $playerName.$con;?>' value='<?php echo $con;?>' required>
+          <input type='text' name='<?php echo $playerName.$int;?>' value='<?php echo $int;?>' required>
+          <input type='text' name='<?php echo $playerName.$wis;?>' value='<?php echo $wis;?>' required>
+          <input type='text' name='<?php echo $playerName.$cha;?>' value='<?php echo $cha;?>' required>
+          <input type='text' name='<?php echo $playerName.$ac;?>' value='<?php echo $ac;?>' required>
+          <input type='text' name='<?php echo $playerName.$speed;?>' value='<?php echo $speed;?>' required>
+          <input type='text' name='<?php echo $playerName.$maxHP;?>' value='<?php echo $maxHP;?>' required>
+          <input type='text' name='<?php echo $playerName.$currentHP;?>' value='<?php echo $currentHP;?>' required>
+          <input type='text' name='<?php echo $playerName.$profs;?>' value='<?php echo $profs;?>' required>
+          <input type='text' name='<?php echo $playerName.$notes;?>' value='<?php echo $notes;?>' required>
+          <input type='text' name='<?php echo $playerName.$isPlayer;?>' value='<?php echo $isPlayer;?>' required>
+        </div>
+        <div class="clear"></div>
+
+      <?php
+    }
+
+    ?>
+        <input type="submit" value="Next Turn">
+      </fieldset>
+    </form>
+    <?php
+
+
+
+
   }
 
 
@@ -71,7 +128,7 @@
  ?>
 </div>
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -113,4 +170,4 @@
 </form>
 
 </body>
-</html> -->
+</html>
