@@ -32,7 +32,7 @@ echo <<<_HEADER_OPEN
         <div id="wrapper">
         <div class='clear'></div>
         <header>
-            <div id='logo'><img id='controller_logo' src='./img/game_controller_logo.png' alt='game controller logo'></div>
+            <div id='logo'><img id='controller_logo' src='./img/dnd.png' alt='game controller logo'></div>
             <div class='clear'></div>
         </header>
 _HEADER_OPEN;
