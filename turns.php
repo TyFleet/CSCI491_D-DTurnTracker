@@ -44,7 +44,7 @@
     $prev_value = "previous";
     $count = 0;
     foreach ($_POST as $key => $value){
-      echo $key . "<br>" . $value . "<br><br>";
+      //echo $key . "<br>" . $value . "<br><br>";
       if($count % 2 == 1){
         $sorted_array[$_POST[$key]] = intval($prev_value);
       }
@@ -53,7 +53,7 @@
     }
 
     asort($sorted_array);
-    print_r($sorted_array);
+    //print_r($sorted_array);
 
     ?>
     <form action="turns.php" method="POST">
@@ -62,7 +62,7 @@
 
     foreach($sorted_array as $key => $value){
       $items = explode(",", $key);
-      print_r($items);
+      //print_r($items);
 
       $charName = $items[0];
       $class = $items[1];
