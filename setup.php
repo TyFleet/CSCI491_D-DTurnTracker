@@ -37,7 +37,7 @@ maxHP VARCHAR(2) NULL DEFAULT NULL ,
 currentHP VARCHAR(2) NULL DEFAULT NULL ,
 proficiencies VARCHAR(1000) NULL DEFAULT NULL ,
 notes VARCHAR(1000) NULL DEFAULT NULL ,
-isPlayerCharacter VARCHAR(1)');
+isPlayerCharacter VARCHAR(1) NULL DEFAULT NULL');
 
 createTable('definitions',
  'keyword varchar(30) NULL,
