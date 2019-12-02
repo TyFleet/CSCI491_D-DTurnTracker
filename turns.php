@@ -2,22 +2,61 @@
 
   require_once "functions.php";
 
-  $query = "SELECT * FROM characterInfo";
-  $result = queryMysql($query);
-  $num    = $result->num_rows;
+  if(empty($_POST)){
+    $query = "SELECT * FROM characterInfo";
+    $result = queryMysql($query);
+    $num    = $result->num_rows;
 
-  for($i = 0; $i < $num; $i++){
-    $row = $result->fetch_array(MYSQLI_ASSOC);
-    echo $row['playerName'];
+?>
+  <h1>Enter Initiatives</h1>
+  <form action="turns.php" method="POST">
+<?php
+
+    for($i = 0; $i < $num; $i++){
+      $row = $result->fetch_array(MYSQLI_ASSOC);
+      ?>
+    <label for='<?php $row['playerName'];?>'><?php echo $row['playerName'];?></label>
+    <input type='number' id='<?php $row['playerName'];?>' name='<?php $row['playerName'];?>' placeholder='0' required>
+    <input type="hidden" name="<?php $row['playerName']."_data";?>" value="<?php $row['charName'].",".$row['class'].",".$row['level'].",".$row['playerName'].",".$row['race'].",".$row['alignment'].",".$row['strength'].",".$row['dexterity'].",".$row['constitution'].",".$row['intelligence'].",".$row['wisdom'].",".$row['charisma'].",".$row['armorclass'].",".$row['speed'].",".$row['maxHP'].",".$row['currentHP'].",".$row['proficiencies'].",".$row['notes'].",".$row['isPlayerCharacter'];?>"
+      <?php
+    }
+    ?>
+    <input type="submit" value="Submit Initiatives">
+  </form>
+    <?php
+
+  }else{
+
+    $post_count = count($_POST);
+
+    ?>
+    <div id='turn_order'>
+    <?php
+    $sorted_array = array();
+    $prev_value = "previous";
+    $count = 0;
+    foreach ($_POST as $key => $value){
+      if($count % 2 == 1){
+        $sorted_array[$_POST[$value]] = $prev_value;
+      }
+      $count = $count + 1;
+      $prev_value = $value;
+    }
+
+    asort($sorted_array);
+    print_r($sorted_array);
   }
+
+
 
   echo "<br>";
   echo "<br>";
   echo "<br>";
   echo "<br>";
  ?>
+</div>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
 <html>
 
@@ -59,4 +98,4 @@
 </form>
 
 </body>
-</html>
+</html> -->

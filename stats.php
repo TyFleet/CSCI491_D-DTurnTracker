@@ -89,6 +89,7 @@ require_once 'functions.php';
             <input type="submit" value="Create Character">
         </p>
     </fieldset>
+  </form>
 
 <?php
 
