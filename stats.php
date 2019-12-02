@@ -127,7 +127,7 @@ if(isset($_POST['player_name'])){
 
   $query_columns = "charName, class, level, playerName, race, alignment, strength, dexterity, constitution, intelligence, wisdom, charisma, armorclass, speed, maxHP, currentHP, proficiencies, notes, isPlayerCharacter";
 
-  $query_values = "{$_POST['char_name']}, {$_POST['class']}, {$_POST['level']}, {$_POST['player_name']}, {$_POST['race']}, {$_POST['align']}, {$_POST['strength']}, {$_POST['dex']}, {$_POST['constit']}, {$_POST['intel']}, {$_POST['wisdom']}, {$_POST['charisma']}, {$_POST['armor']}, {$_POST['speed']}, {$_POST['hp']}, {$_POST['hp']}, {$_POST['profs']}, {$_POST['notes']}, {$chartype}";
+  $query_values = array({$_POST['char_name']}, {$_POST['class']}, {$_POST['level']}, {$_POST['player_name']}, {$_POST['race']}, {$_POST['align']}, {$_POST['strength']}, {$_POST['dex']}, {$_POST['constit']}, {$_POST['intel']}, {$_POST['wisdom']}, {$_POST['charisma']}, {$_POST['armor']}, {$_POST['speed']}, {$_POST['hp']}, {$_POST['hp']}, {$_POST['profs']}, {$_POST['notes']}, {$chartype});
 
 
   echo $db_name . "<br>";
