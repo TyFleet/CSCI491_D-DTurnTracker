@@ -130,6 +130,7 @@ footer {
 
 footer a {
   color: white;
+  bottom: 0;
 }
 
 .game:hover {
