@@ -120,12 +120,7 @@
     </form>
     <?php
 
-
-
-
   }
-
-
 
   echo "<br>";
   echo "<br>";
