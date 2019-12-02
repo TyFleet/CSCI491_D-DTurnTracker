@@ -4,7 +4,13 @@
 
   $query = "SELECT * FROM characterInfo";
   $result = queryMysql($query);
-  echo $result;
+  $num    = $result->num_rows;
+
+  for($i = 0; $i < $num; $i++){
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    echo $row
+  }
+
   echo "<br>";
   echo "<br>";
   echo "<br>";
