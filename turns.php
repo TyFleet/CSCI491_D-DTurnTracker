@@ -56,36 +56,36 @@
     print_r($sorted_array);
 
     ?>
-    <!-- <form action="turns.php" method="POST">
-      <fieldset id='turn_tracker'> -->
+    <form action="turns.php" method="POST">
+      <fieldset id='turn_tracker'>
     <?php
 
     foreach($sorted_array as $key => $value){
       $items = explode(",", $key);
       print_r($items);
-    }
-      // $charName = $items[0];
-      // $class = $items[1];
-      // $level = $items[2];
-      // $playerName = $items[3];
-      // $race = $items[4];
-      // $alignment = $items[5];
-      // $str = $items[6];
-      // $dex = $items[7];
-      // $con = $items[8];
-      // $int = $items[9];
-      // $wis = $items[10];
-      // $cha = $items[11];
-      // $ac = $items[12];
-      // $speed = $items[13];
-      // $maxHP = $items[14];
-      // $currentHP = $items[15];
-      // $profs = $items[16];
-      // $notes = $items[17];
-      // $isPlayer = $items[18];
+
+      $charName = $items[0];
+      $class = $items[1];
+      $level = $items[2];
+      $playerName = $items[3];
+      $race = $items[4];
+      $alignment = $items[5];
+      $str = $items[6];
+      $dex = $items[7];
+      $con = $items[8];
+      $int = $items[9];
+      $wis = $items[10];
+      $cha = $items[11];
+      $ac = $items[12];
+      $speed = $items[13];
+      $maxHP = $items[14];
+      $currentHP = $items[15];
+      $profs = $items[16];
+      $notes = $items[17];
+      $isPlayer = $items[18];
 
       ?>
-        <!-- <div class="row">
+        <div class="row">
           <input type='text' name='<?php echo $playerName.$charName;?>' value='<?php echo $charName;?>' required>
           <input type='text' name='<?php echo $playerName.$class;?>' value='<?php echo $class;?>' required>
           <input type='text' name='<?php echo $playerName.$level;?>' value='<?php echo $level;?>' required>
@@ -106,15 +106,15 @@
           <input type='text' name='<?php echo $playerName.$notes;?>' value='<?php echo $notes;?>' required>
           <input type='text' name='<?php echo $playerName.$isPlayer;?>' value='<?php echo $isPlayer;?>' required>
         </div>
-        <div class="clear"></div> -->
+        <div class="clear"></div>
 
       <?php
-    //}
+    }
 
     ?>
-        <!-- <input type="submit" value="Next Turn">
+        <input type="submit" value="Next Turn">
       </fieldset>
-    </form> -->
+    </form>
     <?php
 
 
