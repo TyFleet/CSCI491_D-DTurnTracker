@@ -14,6 +14,3 @@ Add and Adapt from LAMP Stack assignment
 PHP files to add and complete
  - turns.php
  - stats.php
- 
-Other tasks
- - adapt database to our needs

@@ -1,22 +1,23 @@
 <?php
-#require_once 'header.php';
-echo <<<_END
-<form action='https://wp.zybooks.com/form-viewer.php' target='_blank' method='POST'>
+require_once 'functions.php';
+require_once 'header.php';
+?>
+
+<form action='stats.php' target='_self' method='POST'>
     <fieldset id='char_sheet'>
         <legend>Character Creation</legend>
-        
-        
+
         <p>
         <input type='radio' name='char_type' value='player' id='player' checked><label for='player'>Player</label>
         <input type='radio' name='char_type' value='monster' id='monster'><label for='monster'>Monster</label>
         </p>
-        
+
         <label for='char_name'>Character Name</label>
         <input type='text id='char_name' name='char_name' placeholder='Llewyn' required>
-        
+
         <label for='player_name'>Player Name</label>
         <input type='text' id='player_name' name='player_name' placeholder='John Smith'><br><br>
-        
+
         <label for='class'>Class</label>
         <select id='class' name="class">
             <option value="barbarian">Barbarian</option>
@@ -27,25 +28,25 @@ echo <<<_END
             <option value="monk">Monk</option>
             <option value="paladin">Paladin</option>
             <option value="ranger">Ranger</option>
-            <option value="rouge">Rouge</option>
+            <option value="rogue">Rogue</option>
             <option value="sorcerer">Sorcerer</option>
             <option value="warlock">Warlock</option>
             <option value="wizard">Wizard</option>
         </select>
         <br><br>
-        
+
         <label for='level'>Level</label>
         <input type='number' id='level' name='level' placeholder='1' required><br><br>
-        
+
         <label for='hp'>HP</label>
         <input type='number' id='hp' name='hp' placeholder='0' required>
-        
+
         <label for='armor'>Armor Class</label>
         <input type='number' id='armor' name='armor' placeholder='0' required>
-        
+
         <label for='speed'>Speed</label>
         <input type='text' id='speed' name='speed' placeholder='30' required><br><br>
-        
+
         <label for='strength'>Strength</label>
         <input type='text' id='strength' name='strength' placeholder='0' required>
         <label for='dex'>Dexterity</label>
@@ -60,7 +61,7 @@ echo <<<_END
         <input type='text' id='charisma' name='charisma' placeholder='0' required><br><br>
         Character Image:
         <input type='file' name='image' size='14'><br><br>
-        
+
         <label for='align'>Alignment</label>
         <select id='align' name="align">
             <option value="lawG">Lawful Good</option>
@@ -73,23 +74,66 @@ echo <<<_END
             <option value="neutE">Neutral Evil</option>
             <option value="chaE">Chaotic Evil</option>
         </select>
-        
+
         <label for='race'>Race</label>
         <input type='text' id='race' name='race' placeholder='Human' required><br><br>
-        
+
         <label for='profs'>Proficiencies</label>
         <br>
-        <textarea rows='5' cols='20' id='profs' name='profs'></textarea><br>
-        
+        <textarea rows='5' cols='50' id='profs' name='profs'></textarea><br>
+
         <label for='notes'>Notes</label>
         <br>
-        <textarea rows="5" cols="20" id='notes' name='notes'></textarea>
-        
+        <textarea rows="5" cols="50" id='notes' name='notes'></textarea>
+
         <p>
             <input type="submit" value="Create Character">
         </p>
     </fieldset>
-_END;
-#require_once 'footer.php'
-?>
+  </form>
 
+<?php
+
+if(isset($_POST['player_name'])){
+
+  if ($_POST['char_type'] == 'player'){
+    $chartype = '1';
+  }else{
+    $chartype = '0';
+  }
+
+  #The table that we are inserting into
+  $db_name = "characterInfo";
+
+  //$insert_statement = "INSERT INTO definitions (keyword, description) VALUES ('strength', 'This skill measures might')";
+
+  // echo $_POST['char_name'].
+  // $_POST['class'].
+  // $_POST['level'].
+  // $_POST['player_name'].
+  // $_POST['race'].
+  // $_POST['align'].
+  // $_POST['strength'].
+  // $_POST['dex'].
+  // $_POST['constit'].
+  // $_POST['intel'].
+  // $_POST['wisdom'].
+  // $_POST['charisma'].
+  // $_POST['armor'].
+  // $_POST['speed'].
+  // $_POST['hp'].
+  // $_POST['hp'].
+  // $_POST['profs'].
+  // $_POST['notes'].
+  // $chartype;
+
+  $query_columns = "charName, class, level, playerName, race, alignment, strength, dexterity, constitution, intelligence, wisdom, charisma, armorclass, speed, maxHP, currentHP, proficiencies, notes, isPlayerCharacter";
+
+  $query_values = "'{$_POST['char_name']}', '{$_POST['class']}', '{$_POST['level']}', '{$_POST['player_name']}', '{$_POST['race']}', '{$_POST['align']}', '{$_POST['strength']}', '{$_POST['dex']}', '{$_POST['constit']}', '{$_POST['intel']}', '{$_POST['wisdom']}', '{$_POST['charisma']}', '{$_POST['armor']}', '{$_POST['speed']}', '{$_POST['hp']}', '{$_POST['hp']}', '{$_POST['profs']}', '{$_POST['notes']}', '{$chartype}'";
+
+  insertInto($db_name, $query_columns, $query_values);
+}
+
+
+require_once 'footer.php'
+?>

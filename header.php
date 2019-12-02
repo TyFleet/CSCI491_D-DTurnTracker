@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$clubstr = 'Kyle\'s Gaming Website';
-$userstr = 'Welcome to the Fish Bowl';
+$clubstr = 'D&D Turn Tracker';
+$userstr = 'Roll for Initiative';
 
 echo <<<_INIT
 <!DOCTYPE html>
@@ -30,40 +30,34 @@ echo <<<_HEADER_OPEN
 
     <body>
         <div id="wrapper">
-        <div class='clear'></div>
         <header>
-            <div id='logo'><img id='controller_logo' src='./img/game_controller_logo.png' alt='game controller logo'></div>
-            <div class='clear'></div>
-        </header>
+            <div id='logo'><img id='controller_logo' src='./img/dnd.png' alt='game controller logo'></div>
 _HEADER_OPEN;
 
 if ($loggedin) {
 echo <<<_LOGGEDIN
 
-        <div class='sidebar'><nav><ul>
-            <li><a href='members.php?view=$user'>Home</a></li>
-            <li><a href='members.php'>Members</a></li>
-            <li><a href='friends.php'>Friends</a></li>
-            <li><a href='games.php'>Games</a></li>
-            <li><a href='messages.php'>Messages</a></li>
-            <li><a href='profile.php'>Edit Profile</a></li>
+        <nav><ul>
+            <li><a href='index.php?view=$user'>Home</a></li>
+            <li><a href='stats.php'>Character Input</a></li>
+            <li><a href='turns.php'>Turn Tracker</a></li>
             <li><a href='logout.php'>Log out</a></li>
-        </ul></nav></div>
+        </ul></nav>
 
 _LOGGEDIN;
 } else {
 echo <<<_GUEST
-
-        <div class='sidebar'><nav><ul>
+        <nav><ul>
             <li><a href='index.php'>Home</a></li>
             <li><a href='signup.php'>Sign Up</a></li>
             <li><a href='login.php'>Log In</a></li>
-        </ul></nav></div>
+        </ul></nav>
 _GUEST;
  }
 
 echo <<<_HEADER_CLOSE
 
+        </header>
         <div class='username'>$userstr</div>
         <div id="content">
 
