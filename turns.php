@@ -2,7 +2,7 @@
 
   require_once "functions.php";
 
-  if(empty($_POST)){
+  if(!isset($_POST)){
     $query = "SELECT * FROM characterInfo";
     $result = queryMysql($query);
     $num    = $result->num_rows;
