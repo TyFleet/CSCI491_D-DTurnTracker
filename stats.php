@@ -161,7 +161,7 @@ if(isset($_POST['player_name'])){
                                        intval($_POST['hp']),
                                        $_POST['profs'],
                                        $_POST['notes'],
-                                       $chartype)";
+                                       intval($chartype))";
 
   queryMysql($insert_statement);
 }
