@@ -95,9 +95,9 @@ require_once 'functions.php';
 if(isset($_POST['player_name'])){
 
   if ($_POST['char_type'] == 'player'){
-    $chartype = 1;
+    $chartype = '1';
   }else{
-    $chartype = 0;
+    $chartype = '0';
   }
 
   #The table that we are inserting into
