@@ -48,7 +48,8 @@
     }
 
     asort($sorted_array);
-    echo "here we are";
+    print_r($_POST);
+    echo "<br> here we are <br>";
     print_r($sorted_array);
   }
 
