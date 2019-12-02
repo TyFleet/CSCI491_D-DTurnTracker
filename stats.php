@@ -122,7 +122,7 @@ if(isset($_POST['player_name'])){
                                      proficiencies,
                                      notes,
                                      isPlayerCharacter)
-                                     VALUES (".
+                                     VALUES (
                                        $_POST['char_name'],
                                        $_POST['class'],
                                        $_POST['level'],
@@ -141,7 +141,7 @@ if(isset($_POST['player_name'])){
                                        $_POST['hp'],
                                        $_POST['profs'],
                                        $_POST['notes'],
-                                       $chartype.")";
+                                       $chartype)";
 
   queryMysql($insert_statement);
 }
