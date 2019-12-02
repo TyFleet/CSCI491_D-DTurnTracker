@@ -10,6 +10,7 @@
 ?>
   <h1>Enter Initiatives</h1>
   <form action="turns.php" method="POST">
+  <fieldset id="initiative_getter">
 <?php
 
     for($i = 0; $i < $num; $i++){
@@ -21,7 +22,10 @@
       <?php
     }
     ?>
-    <input type="submit" value="Submit Initiatives">
+    <p>
+      <input type="submit" value="Submit Initiatives">
+    </p>
+  </fieldset>
   </form>
     <?php
 
