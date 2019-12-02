@@ -1,7 +1,7 @@
 <?php
 
   require_once "functions.php";
-
+  unset($_POST);
   if(!isset($_POST)){
     $query = "SELECT * FROM characterInfo";
     $result = queryMysql($query);
