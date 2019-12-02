@@ -61,7 +61,7 @@
     <?php
 
     foreach($sorted_array as $key => $value){
-      $items = explode("," $key);
+      $items = explode(",", $key);
       print_r($items);
     }
       // $charName = $items[0];
