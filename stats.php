@@ -122,48 +122,48 @@ if(isset($_POST['player_name'])){
   $_POST['notes'].
   $chartype;
 
-  // $insert_statement = "INSERT INTO characterInfo
-  //                                    (charName,
-  //                                    class,
-  //                                    level,
-  //                                    playerName,
-  //                                    race,
-  //                                    alignment,
-  //                                    strength,
-  //                                    dexterity,
-  //                                    constitution,
-  //                                    intelligence,
-  //                                    wisdom,
-  //                                    charisma,
-  //                                    armorclass,
-  //                                    speed,
-  //                                    maxHP,
-  //                                    currentHP,
-  //                                    proficiencies,
-  //                                    notes,
-  //                                    isPlayerCharacter)
-  //                                    VALUES (
-  //                                      $_POST['char_name'],
-  //                                      $_POST['class'],
-  //                                      $_POST['level'],
-  //                                      $_POST['player_name'],
-  //                                      $_POST['race'],
-  //                                      $_POST['align'],
-  //                                      $_POST['strength'],
-  //                                      $_POST['dex'],
-  //                                      $_POST['constit'],
-  //                                      $_POST['intel'],
-  //                                      $_POST['wisdom'],
-  //                                      $_POST['charisma'],
-  //                                      $_POST['armor'],
-  //                                      $_POST['speed'],
-  //                                      $_POST['hp'],
-  //                                      $_POST['hp'],
-  //                                      $_POST['profs'],
-  //                                      $_POST['notes'],
-  //                                      $chartype)";
+  $insert_statement = "INSERT INTO characterInfo
+                                     (charName,
+                                     class,
+                                     level,
+                                     playerName,
+                                     race,
+                                     alignment,
+                                     strength,
+                                     dexterity,
+                                     constitution,
+                                     intelligence,
+                                     wisdom,
+                                     charisma,
+                                     armorclass,
+                                     speed,
+                                     maxHP,
+                                     currentHP,
+                                     proficiencies,
+                                     notes,
+                                     isPlayerCharacter)
+                                     VALUES (
+                                       $_POST['char_name'],
+                                       $_POST['class'],
+                                       intval($_POST['level']),
+                                       $_POST['player_name'],
+                                       $_POST['race'],
+                                       $_POST['align'],
+                                       intval($_POST['strength']),
+                                       intval($_POST['dex']),
+                                       intval($_POST['constit']),
+                                       intval($_POST['intel']),
+                                       intval($_POST['wisdom']),
+                                       intval($_POST['charisma']),
+                                       intval($_POST['armor']),
+                                       intval($_POST['speed']),
+                                       intval($_POST['hp']),
+                                       intval($_POST['hp']),
+                                       $_POST['profs'],
+                                       $_POST['notes'],
+                                       $chartype)";
 
-  // queryMysql($insert_statement);
+  queryMysql($insert_statement);
 }
 
 
