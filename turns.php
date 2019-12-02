@@ -33,9 +33,6 @@
 
   }else{
 
-    ?>
-    <div id='turn_order'>
-    <?php
     $sorted_array = array();
     $prev_value = "previous";
     $count = 0;
@@ -123,7 +120,6 @@
   echo "<br>";
   echo "<br>";
  ?>
-</div>
 
 <?php
   require_once "footer.php";
