@@ -1,7 +1,7 @@
 <?php
 
   require_once "functions.php";
-  
+
   if(!isset($_POST)){
     $query = "SELECT * FROM characterInfo";
     $result = queryMysql($query);
@@ -48,7 +48,7 @@
     }
 
     asort($sorted_array);
-    print_r($_POST);
+    print_r(sizeof($_POST));
     echo "<br> here we are <br>";
     print_r($sorted_array);
   }
