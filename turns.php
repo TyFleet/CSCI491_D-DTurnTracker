@@ -21,7 +21,9 @@
       $row = $result->fetch_array(MYSQLI_ASSOC);
       ?>
       <label for='<?php echo $row['playerName'];?>'><?php echo $row['playerName'];?></label>
+
       <input type='number' id='<?php echo $row['playerName'];?>' name='<?php echo $row['playerName'];?>' placeholder='0' required>
+
       <input type="hidden" name="<?php echo $row['playerName']."_data";?>" value="<?php echo $row['charName'].",".$row['class'].",".$row['level'].",".$row['playerName'].",".$row['race'].",".$row['alignment'].",".$row['strength'].",".$row['dexterity'].",".$row['constitution'].",".$row['intelligence'].",".$row['wisdom'].",".$row['charisma'].",".$row['armorclass'].",".$row['speed'].",".$row['maxHP'].",".$row['currentHP'].",".$row['proficiencies'].",".$row['notes'].",".$row['isPlayerCharacter'];?>"
       <?php
     }
@@ -44,6 +46,7 @@
     $prev_value = "previous";
     $count = 0;
     foreach ($_POST as $key => $value){
+      echo $key . "<br>" . $value . "<br><br><br><br>";
       if($count % 2 == 1){
         $sorted_array[$_POST[$value]] = $prev_value;
       }
