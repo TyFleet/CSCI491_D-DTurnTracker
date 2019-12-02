@@ -10,7 +10,7 @@
 ?>
   <h1>Enter Initiatives</h1>
   <form action="turns.php" method="POST">
-  <fieldset id="initiative_getter">
+    <fieldset id="initiative_getter">
 <?php
 
     echo "<br><br>";
@@ -20,16 +20,16 @@
     for($i = 0; $i < $num; $i++){
       $row = $result->fetch_array(MYSQLI_ASSOC);
       ?>
-    <label for='<?php $row['playerName'];?>'><?php echo $row['playerName'];?></label>
-    <input type='number' id='<?php $row['playerName'];?>' name='<?php $row['playerName'];?>' placeholder='0' required>
-    <input type="hidden" name="<?php $row['playerName']."_data";?>" value="<?php $row['charName'].",".$row['class'].",".$row['level'].",".$row['playerName'].",".$row['race'].",".$row['alignment'].",".$row['strength'].",".$row['dexterity'].",".$row['constitution'].",".$row['intelligence'].",".$row['wisdom'].",".$row['charisma'].",".$row['armorclass'].",".$row['speed'].",".$row['maxHP'].",".$row['currentHP'].",".$row['proficiencies'].",".$row['notes'].",".$row['isPlayerCharacter'];?>"
+      <label for='<?php echo $row['playerName'];?>'><?php echo $row['playerName'];?></label>
+      <input type='number' id='<?php echo $row['playerName'];?>' name='<?php echo $row['playerName'];?>' placeholder='0' required>
+      <input type="hidden" name="<?php echo $row['playerName']."_data";?>" value="<?php echo $row['charName'].",".$row['class'].",".$row['level'].",".$row['playerName'].",".$row['race'].",".$row['alignment'].",".$row['strength'].",".$row['dexterity'].",".$row['constitution'].",".$row['intelligence'].",".$row['wisdom'].",".$row['charisma'].",".$row['armorclass'].",".$row['speed'].",".$row['maxHP'].",".$row['currentHP'].",".$row['proficiencies'].",".$row['notes'].",".$row['isPlayerCharacter'];?>"
       <?php
     }
     ?>
-    <p>
-      <input type="submit" value="Submit Initiatives">
-    </p>
-  </fieldset>
+      <p>
+        <input type="submit" value="Submit Initiatives">
+      </p>
+    </fieldset>
   </form>
     <?php
 
