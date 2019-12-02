@@ -2,7 +2,8 @@
 
   require_once "functions.php";
 
-  $result = selectAll();
+  $query = "SELECT * FROM characterInfo";
+  $result = queryMysql($query);
   echo $result;
   echo "<br>";
   echo "<br>";
