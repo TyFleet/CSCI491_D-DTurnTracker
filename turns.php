@@ -48,6 +48,7 @@
     }
 
     asort($sorted_array);
+    echo "here we are";
     print_r($sorted_array);
   }
 
