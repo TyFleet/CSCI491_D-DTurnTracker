@@ -60,9 +60,10 @@
       <fieldset id='turn_tracker'> -->
     <?php
 
-    // foreach($sorted_array as $key => $value){
-    //   $items = explode("," $key);
-    //   print_r($items);
+    foreach($sorted_array as $key => $value){
+      $items = explode("," $key);
+      print_r($items);
+    }
       // $charName = $items[0];
       // $class = $items[1];
       // $level = $items[2];
