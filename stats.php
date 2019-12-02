@@ -134,7 +134,7 @@ if(isset($_POST['player_name'])){
   echo $query_columns . "<br>";
   echo $query_values . "<br>";
 
-  insertInto($db_name, $query_columns, $query_values);
+  //insertInto($db_name, $query_columns, $query_values);
 
   $query_value_test = "{$_POST['char_name']}";
   echo $query_value_test . "<br>";
