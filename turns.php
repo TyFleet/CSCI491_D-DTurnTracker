@@ -53,7 +53,9 @@
 
     asort($sorted_array);
     print_r(sizeof($_POST));
-    echo "<br> here we are <br>";
+    echo "<br><br>";
+    print_r($_POST);
+    echo "<br><br>";
     print_r($sorted_array);
   }
 
