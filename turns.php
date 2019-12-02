@@ -46,9 +46,9 @@
     $prev_value = "previous";
     $count = 0;
     foreach ($_POST as $key => $value){
-      echo $key . "<br>" . $value . "<br><br><br><br>";
+      echo $key . "<br>" . $value . "<br><br>";
       if($count % 2 == 1){
-        $sorted_array[$_POST[$value]] = $prev_value;
+        $sorted_array[$_POST[$key]] = intval($prev_value);
       }
       $count = $count + 1;
       $prev_value = $value;
