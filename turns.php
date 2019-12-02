@@ -8,7 +8,7 @@
 
   for($i = 0; $i < $num; $i++){
     $row = $result->fetch_array(MYSQLI_ASSOC);
-    echo $row
+    echo $row;
   }
 
   echo "<br>";
