@@ -105,25 +105,25 @@ if(isset($_POST['player_name'])){
 
   //$insert_statement = "INSERT INTO definitions (keyword, description) VALUES ('strength', 'This skill measures might')";
 
-  echo $_POST['char_name'].
-  $_POST['class'].
-  $_POST['level'].
-  $_POST['player_name'].
-  $_POST['race'].
-  $_POST['align'].
-  $_POST['strength'].
-  $_POST['dex'].
-  $_POST['constit'].
-  $_POST['intel'].
-  $_POST['wisdom'].
-  $_POST['charisma'].
-  $_POST['armor'].
-  $_POST['speed'].
-  $_POST['hp'].
-  $_POST['hp'].
-  $_POST['profs'].
-  $_POST['notes'].
-  $chartype;
+  // echo $_POST['char_name'].
+  // $_POST['class'].
+  // $_POST['level'].
+  // $_POST['player_name'].
+  // $_POST['race'].
+  // $_POST['align'].
+  // $_POST['strength'].
+  // $_POST['dex'].
+  // $_POST['constit'].
+  // $_POST['intel'].
+  // $_POST['wisdom'].
+  // $_POST['charisma'].
+  // $_POST['armor'].
+  // $_POST['speed'].
+  // $_POST['hp'].
+  // $_POST['hp'].
+  // $_POST['profs'].
+  // $_POST['notes'].
+  // $chartype;
 
   $query_columns = "charName, class, level, playerName, race, alignment, strength, dexterity, constitution, intelligence, wisdom, charisma, armorclass, speed, maxHP, currentHP, proficiencies, notes, isPlayerCharacter";
 
