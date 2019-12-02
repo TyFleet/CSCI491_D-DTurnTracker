@@ -1,5 +1,6 @@
 <?php
 require_once 'functions.php';
+require_once 'header.php';
 ?>
 
 <form action='stats.php' target='_self' method='POST'>
@@ -134,5 +135,5 @@ if(isset($_POST['player_name'])){
 }
 
 
-#require_once 'footer.php'
+require_once 'footer.php'
 ?>
