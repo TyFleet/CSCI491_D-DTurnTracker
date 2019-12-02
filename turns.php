@@ -13,6 +13,10 @@
   <fieldset id="initiative_getter">
 <?php
 
+    echo "<br><br>";
+    print_r($_POST);
+    echo "<br><br>";
+
     for($i = 0; $i < $num; $i++){
       $row = $result->fetch_array(MYSQLI_ASSOC);
       ?>
