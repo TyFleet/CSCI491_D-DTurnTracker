@@ -19,6 +19,11 @@ function insertInto($db_name, $query_columns, $query_values){
   queryMysql("INSERT INTO $db_name ($query_columns) VALUES ($query_values)");
 }
 
+function selectAll($db_name){
+  $result = queryMysql("SELECT * FROM $db_name");
+  return $result;
+}
+
 function queryMysql($query) {
     global $connection;
     $result = $connection->query($query);

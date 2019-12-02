@@ -1,3 +1,15 @@
+<?php
+
+  require_once "functions.php";
+
+  $result = selectAll('characterInfo');
+  echo $result;
+  echo "<br>";
+  echo "<br>";
+  echo "<br>";
+  echo "<br>";
+ ?>
+
 <!DOCTYPE html>
 
 <html>
