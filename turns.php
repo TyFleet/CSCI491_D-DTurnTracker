@@ -2,8 +2,8 @@
 
   require_once "functions.php";
 
-  // $result = selectAll('characterInfo');
-  // echo $result;
+  $result = selectAll();
+  echo $result;
   echo "<br>";
   echo "<br>";
   echo "<br>";
