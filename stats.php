@@ -100,7 +100,8 @@ if(isset($_POST['player_name'])){
     $chartype = 0;
   }
 
-  //$insert_statement = "INSERT INTO definitions (keyword, description) VALUES ('dexterity', 'This skill measures balance')";
+  $insert_statement = "INSERT INTO definitions (keyword, description) VALUES ('strength',
+                                                                              'This skill measures might')";
 
   echo $_POST['char_name'].
   $_POST['class'].
