@@ -27,7 +27,7 @@ require_once 'functions.php';
             <option value="monk">Monk</option>
             <option value="paladin">Paladin</option>
             <option value="ranger">Ranger</option>
-            <option value="rouge">Rouge</option>
+            <option value="rogue">Rogue</option>
             <option value="sorcerer">Sorcerer</option>
             <option value="warlock">Warlock</option>
             <option value="wizard">Wizard</option>
@@ -129,15 +129,7 @@ if(isset($_POST['player_name'])){
 
   $query_values = "'{$_POST['char_name']}', '{$_POST['class']}', '{$_POST['level']}', '{$_POST['player_name']}', '{$_POST['race']}', '{$_POST['align']}', '{$_POST['strength']}', '{$_POST['dex']}', '{$_POST['constit']}', '{$_POST['intel']}', '{$_POST['wisdom']}', '{$_POST['charisma']}', '{$_POST['armor']}', '{$_POST['speed']}', '{$_POST['hp']}', '{$_POST['hp']}', '{$_POST['profs']}', '{$_POST['notes']}', '{$chartype}'";
 
-
-  echo $db_name . "<br>";
-  echo $query_columns . "<br>";
-  echo $query_values . "<br>";
-
   insertInto($db_name, $query_columns, $query_values);
-
-  $query_value_test = "{$_POST['char_name']}";
-  echo $query_value_test . "<br>";
 }
 
 
