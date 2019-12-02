@@ -125,18 +125,19 @@ if(isset($_POST['player_name'])){
   $_POST['notes'].
   $chartype;
 
-  $query_columns = "charName, class, level, playerName, race, alignment, strength, dexterity, constitution, intelligence, wisdom, charisma, armorclass, speed, maxHP, currentHP, proficiencies, notes, isPlayerCharacter";
-
-  $query_values = "$_POST['char_name'], $_POST['class'], $_POST['level'], $_POST['player_name'], $_POST['race'], $_POST['align'], $_POST['strength'], $_POST['dex'], $_POST['constit'], $_POST['intel'], $_POST['wisdom'], $_POST['charisma'], $_POST['armor'], $_POST['speed'], $_POST['hp'], $_POST['hp'], $_POST['profs'], $_POST['notes'], $chartype";
+  // $query_columns = "charName, class, level, playerName, race, alignment, strength, dexterity, constitution, intelligence, wisdom, charisma, armorclass, speed, maxHP, currentHP, proficiencies, notes, isPlayerCharacter";
+  //
+  // $query_values = "$_POST['char_name'], $_POST['class'], $_POST['level'], $_POST['player_name'], $_POST['race'], $_POST['align'], $_POST['strength'], $_POST['dex'], $_POST['constit'], $_POST['intel'], $_POST['wisdom'], $_POST['charisma'], $_POST['armor'], $_POST['speed'], $_POST['hp'], $_POST['hp'], $_POST['profs'], $_POST['notes'], $chartype";
+  //
+  //
+  // echo $db_name . "<br>";
+  // echo $query_columns . "<br>";
+  // echo $query_values . "<br>";
+  //
+  // insertInto($db_name, $query_columns, $query_values);
 
   $query_value_test = "{$_POST['char_name']}";
-
-  echo $db_name . "<br>";
-  echo $query_columns . "<br>";
-  echo $query_values . "<br>";
   echo $query_value_test . "<br>";
-
-  insertInto($db_name, $query_columns, $query_values);
 }
 
 
